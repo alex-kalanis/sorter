@@ -1,23 +1,23 @@
 <?php
 
-use Sorter\SortColumn;
+use Sorter\SortByEntry;
 
 
 class CommonTestClass extends \PHPUnit\Framework\TestCase
 {
-    public function mockColumn1(): SortColumn
+    public function mockEntry1(): SortByEntry
     {
-        return (new SortColumn())->setKey('foo');
+        return (new SortByEntry())->setKey('foo');
     }
 
-    public function mockColumn2(): SortColumn
+    public function mockEntry2(): SortByEntry
     {
-        return (new SortColumn())->setKey('bar')->setDirection(SortColumn::DIRECTION_ASC);
+        return (new SortByEntry())->setKey('bar')->setDirection(SortByEntry::DIRECTION_ASC);
     }
 
-    public function mockColumn3(): SortColumn
+    public function mockEntry3(): SortByEntry
     {
-        return (new SortColumn())->setKey('baz')->setDirection(SortColumn::DIRECTION_DESC);
+        return (new SortByEntry())->setKey('baz')->setDirection(SortByEntry::DIRECTION_DESC);
     }
 
 }

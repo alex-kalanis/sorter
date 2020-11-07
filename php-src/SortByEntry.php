@@ -4,11 +4,11 @@ namespace Sorter;
 
 
 /**
- * Class SortColumn
+ * Class SortEntry
  * @package Sorter
- * Basic implementation of single column for sorting
+ * Basic implementation of single entry for sorting
  */
-class SortColumn implements ISortColumn
+class SortByEntry implements ISortEntry
 {
     protected $key = '';
     protected $direction = self::DIRECTION_ASC;

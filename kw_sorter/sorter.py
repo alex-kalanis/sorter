@@ -1,6 +1,6 @@
 
 
-class ISortColumn:
+class ISortEntry:
     """
      * Basic necessity to sort anything
     """
@@ -28,34 +28,34 @@ class ISorter:
      * Make your app dependant on this interface
     """
 
-    def get_columns(self):
+    def get_entries(self):
         """
-         * Get columns in sorting
-        """
-        raise NotImplementedError('TBA')
-
-    def add(self, column: ISortColumn):
-        """
-         * Add single column from input which will be used for sorting
+         * Get entries in sorting
         """
         raise NotImplementedError('TBA')
 
-    def remove(self, column_key: str):
+    def add(self, entry: ISortEntry):
         """
-         * Remove all columns containing that key
+         * Add single entry from input which will be used for sorting
+        """
+        raise NotImplementedError('TBA')
+
+    def remove(self, entry_key: str):
+        """
+         * Remove all entries containing that key
         """
         raise NotImplementedError('TBA')
 
     def clear(self):
         """
-         * Clear sorting columns, be ready for another set
+         * Clear sorting entries, be ready for another set
         """
         raise NotImplementedError('TBA')
 
 
-class SortColumn(ISortColumn):
+class SortByEntry(ISortEntry):
     """
-     * Basic implementation of single column for sorting
+     * Basic implementation of single entry for sorting
     """
 
     def __init__(self):
@@ -84,24 +84,24 @@ class Sorter(ISorter):
     """
 
     def __init__(self):
-        self._columns = []
+        self._entries = []
 
-    def get_columns(self):
-        for column in self._columns:
-            yield column
+    def get_entries(self):
+        for entry in self._entries:
+            yield entry
 
-    def add(self, column: ISortColumn):
-        self._columns.append(column)
+    def add(self, entry: ISortEntry):
+        self._entries.append(entry)
         return self
 
-    def remove(self, column_key: str):
+    def remove(self, entry_key: str):
         another = []
-        for column in self._columns:
-            if column.get_key() != column_key:
-                another.append(column)
-        self._columns = another
+        for entry in self._entries:
+            if entry.get_key() != entry_key:
+                another.append(entry)
+        self._entries = another
         return self
 
     def clear(self):
-        self._columns = []
+        self._entries = []
         return self

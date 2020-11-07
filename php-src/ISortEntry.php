@@ -4,11 +4,11 @@ namespace Sorter;
 
 
 /**
- * Interface ISortColumn
+ * Interface ISortEntry
  * @package Sorter
  * Basic necessity to sort anything
  */
-interface ISortColumn
+interface ISortEntry
 {
     const DIRECTION_ASC = 'ASC';
     const DIRECTION_DESC = 'DESC';

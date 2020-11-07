@@ -12,27 +12,27 @@ use Traversable;
  */
 class Sorter implements ISorter
 {
-    /** @var ISortColumn[] */
-    protected $columns = [];
+    /** @var ISortEntry[] */
+    protected $entries = [];
 
-    public function getColumns(): Traversable
+    public function getEntries(): Traversable
     {
-        foreach ($this->columns as $column) {
-            yield $column;
+        foreach ($this->entries as $entry) {
+            yield $entry;
         }
     }
 
-    public function add(ISortColumn $column): ISorter
+    public function add(ISortEntry $entry): ISorter
     {
-        $this->columns[] = $column;
+        $this->entries[] = $entry;
         return $this;
     }
 
-    public function remove(string $columnKey): ISorter
+    public function remove(string $entryKey): ISorter
     {
-        foreach ($this->columns as $index => $column) {
-            if ($column->getKey() == $columnKey) {
-                unset($this->columns[$index]);
+        foreach ($this->entries as $index => $entry) {
+            if ($entry->getKey() == $entryKey) {
+                unset($this->entries[$index]);
             }
         }
         return $this;
@@ -40,7 +40,7 @@ class Sorter implements ISorter
 
     public function clear(): ISorter
     {
-        $this->columns = [];
+        $this->entries = [];
         return $this;
     }
 }

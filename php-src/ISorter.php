@@ -14,27 +14,27 @@ use Traversable;
 interface ISorter
 {
     /**
-     * Get columns in sorting
-     * @return Traversable ISortColumn
+     * Get entries in sorting
+     * @return Traversable ISortEntry
      */
-    public function getColumns(): Traversable;
+    public function getEntries(): Traversable;
 
     /**
-     * Add single column from input which will be used for sorting
-     * @param ISortColumn $column
+     * Add single entry from input which will be used for sorting
+     * @param ISortEntry $entry
      * @return $this
      */
-    public function add(ISortColumn $column): self;
+    public function add(ISortEntry $entry): self;
 
     /**
-     * Remove all columns containing that key
-     * @param string $columnKey
+     * Remove all entries containing that key
+     * @param string $entryKey
      * @return $this
      */
-    public function remove(string $columnKey): self;
+    public function remove(string $entryKey): self;
 
     /**
-     * Clear sorting columns, be ready for another set
+     * Clear sorting entries, be ready for another set
      * @return $this
      */
     public function clear(): self;
