@@ -7,7 +7,6 @@ namespace Sorter;
  * Interface ISortColumn
  * @package Sorter
  * Basic necessity to sort anything
- *
  */
 interface ISortColumn
 {
