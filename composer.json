@@ -1,0 +1,21 @@
+{
+  "name": "alex-kalanis/sorter",
+  "description": "Shareable sorter - basic interfaces",
+  "keywords": [],
+  "license": "BSD 3-Clause",
+  "type": "project",
+  "require": {
+    "php": ">=7.2.0"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Sorter\\": "php-src/"
+    }
+  },
+  "scripts": {
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
