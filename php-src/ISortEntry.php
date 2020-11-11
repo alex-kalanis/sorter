@@ -14,10 +14,25 @@ interface ISortEntry
     const DIRECTION_DESC = 'DESC';
 
     /**
+     * Set by which key the entry will be sorted
+     * @param string $key
+     * @return $this
+     */
+    public function setKey(string $key): self;
+
+    /**
      * Sort by which key
      * @return string
      */
     public function getKey(): string;
+
+    /**
+     * Set direction of sort
+     * Preferably use constants above
+     * @param string $direction
+     * @return $this
+     */
+    public function setDirection(string $direction): self;
 
     /**
      * Sorting direction

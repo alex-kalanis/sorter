@@ -33,6 +33,8 @@ class BasicTest extends CommonTestClass
         $sorter = new Sorter();
         $this->assertEmpty(iterator_to_array($sorter->getEntries()));
 
+        $this->assertInstanceOf('\Sorter\SortByEntry', $sorter->getDefaultItem());
+
         $sorter->add($this->mockEntry1());
         $sorter->add($this->mockEntry2());
         $sorter->add($this->mockEntry3());

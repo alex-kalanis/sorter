@@ -23,6 +23,8 @@ class ItemTest(CommonTestClass):
         sorter = Sorter()
         assert 1 > len(self._iterator_to_array(sorter.get_entries()))
 
+        assert isinstance(sorter.get_default_item(), ISortEntry)
+
         sorter.add(self._mock_entry_1())
         sorter.add(self._mock_entry_2())
         sorter.add(self._mock_entry_3())

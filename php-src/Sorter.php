@@ -43,4 +43,9 @@ class Sorter implements ISorter
         $this->entries = [];
         return $this;
     }
+
+    public function getDefaultItem(): ISortEntry
+    {
+        return new SortByEntry();
+    }
 }

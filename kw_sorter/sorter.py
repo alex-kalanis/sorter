@@ -8,9 +8,22 @@ class ISortEntry:
     DIRECTION_ASC = 'ASC'
     DIRECTION_DESC = 'DESC'
 
+    def set_key(self, key: str):
+        """
+         * Set by which key the entry will be sorted
+        """
+        raise NotImplementedError('TBA')
+
     def get_key(self) -> str:
         """
          * Sort by which key
+        """
+        raise NotImplementedError('TBA')
+
+    def set_direction(self, direction: str):
+        """
+         * Set direction of sort
+         * Preferably use constants above
         """
         raise NotImplementedError('TBA')
 
@@ -49,6 +62,12 @@ class ISorter:
     def clear(self):
         """
          * Clear sorting entries, be ready for another set
+        """
+        raise NotImplementedError('TBA')
+
+    def get_default_item(self) -> ISortEntry:
+        """
+         * Return new entry usable for sorting
         """
         raise NotImplementedError('TBA')
 
@@ -105,3 +124,6 @@ class Sorter(ISorter):
     def clear(self):
         self._entries = []
         return self
+
+    def get_default_item(self) -> ISortEntry:
+        return SortByEntry()

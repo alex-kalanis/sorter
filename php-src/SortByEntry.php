@@ -13,7 +13,7 @@ class SortByEntry implements ISortEntry
     protected $key = '';
     protected $direction = self::DIRECTION_ASC;
 
-    public function setKey(string $key): self
+    public function setKey(string $key): ISortEntry
     {
         $this->key = $key;
         return $this;
@@ -24,7 +24,7 @@ class SortByEntry implements ISortEntry
         return $this->key;
     }
 
-    public function setDirection(string $direction): self
+    public function setDirection(string $direction): ISortEntry
     {
         $this->direction = in_array($direction, [static::DIRECTION_ASC, static::DIRECTION_DESC]) ? $direction : $this->direction;
         return $this;

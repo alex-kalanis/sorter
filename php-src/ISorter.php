@@ -38,4 +38,10 @@ interface ISorter
      * @return $this
      */
     public function clear(): self;
+
+    /**
+     * Return new entry usable for sorting
+     * @return ISortEntry
+     */
+    public function getDefaultItem(): ISortEntry;
 }
