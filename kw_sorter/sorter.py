@@ -106,8 +106,7 @@ class Sorter(ISorter):
         self._entries = []
 
     def get_entries(self):
-        for entry in self._entries:
-            yield entry
+        yield from self._entries
 
     def add(self, entry: ISortEntry):
         self._entries.append(entry)

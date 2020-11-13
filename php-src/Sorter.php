@@ -17,9 +17,7 @@ class Sorter implements ISorter
 
     public function getEntries(): Traversable
     {
-        foreach ($this->entries as $entry) {
-            yield $entry;
-        }
+        yield from $this->entries;
     }
 
     public function add(ISortEntry $entry): ISorter
