@@ -12,9 +12,3 @@ class CommonTestClass(unittest.TestCase):
 
     def _mock_entry_3(self) -> SortByEntry:
         return SortByEntry().set_key('baz').set_direction(SortByEntry.DIRECTION_DESC)
-
-    def _iterator_to_array(self, iter):
-        cont = []
-        for content in iter:
-            cont.append(content)
-        return cont

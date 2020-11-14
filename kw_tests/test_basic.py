@@ -21,7 +21,7 @@ class ItemTest(CommonTestClass):
 
     def test_sorter_basic(self):
         sorter = Sorter()
-        assert 1 > len(self._iterator_to_array(sorter.get_entries()))
+        assert 1 > len(list(sorter.get_entries()))
 
         assert isinstance(sorter.get_default_item(), ISortEntry)
 
@@ -29,10 +29,10 @@ class ItemTest(CommonTestClass):
         sorter.add(self._mock_entry_2())
         sorter.add(self._mock_entry_3())
 
-        assert 0 < len(self._iterator_to_array(sorter.get_entries()))
+        assert 0 < len(list(sorter.get_entries()))
 
         sorter.clear()
-        assert 1 > len(self._iterator_to_array(sorter.get_entries()))
+        assert 1 > len(list(sorter.get_entries()))
 
     def test_sorter_removal(self):
         sorter = Sorter()
@@ -41,13 +41,13 @@ class ItemTest(CommonTestClass):
         sorter.add(self._mock_entry_3())
         sorter.add(self._mock_entry_3())  # intentional
 
-        assert 3 == len(self._iterator_to_array(sorter.get_entries()))
+        assert 3 == len(list(sorter.get_entries()))
 
         sorter.remove(self._mock_entry_3().get_key())
-        assert 1 == len(self._iterator_to_array(sorter.get_entries()))
+        assert 1 == len(list(sorter.get_entries()))
 
         sorter.clear()
-        assert 1 > len(self._iterator_to_array(sorter.get_entries()))
+        assert 1 > len(list(sorter.get_entries()))
 
     def test_sorter_order(self):
         sorter = Sorter()
@@ -56,7 +56,7 @@ class ItemTest(CommonTestClass):
         sorter.add(self._mock_entry_3())
         sorter.add(self._mock_entry_2())
 
-        result = self._iterator_to_array(sorter.get_entries())
+        result = list(sorter.get_entries())
         assert self._mock_entry_1().get_key() == result[0].get_key()
         assert self._mock_entry_3().get_key() == result[1].get_key()
         assert self._mock_entry_2().get_key() == result[2].get_key()
