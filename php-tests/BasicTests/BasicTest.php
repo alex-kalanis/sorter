@@ -3,7 +3,7 @@
 namespace BasicTests;
 
 use CommonTestClass;
-use Sorter\ISortEntry;
+use Sorter\Interfaces\ISortEntry;
 use Sorter\SortByEntry;
 use Sorter\Sorter;
 

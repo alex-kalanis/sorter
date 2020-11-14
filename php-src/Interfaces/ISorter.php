@@ -1,13 +1,13 @@
 <?php
 
-namespace Sorter;
+namespace Sorter\Interfaces;
 
 use Traversable;
 
 
 /**
  * Interface ISorter
- * @package Sorter
+ * @package Sorter\Interfaces
  * Basic interface
  * Make your app dependant on this interface
  */

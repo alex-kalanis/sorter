@@ -1,4 +1,5 @@
-from kw_sorter.sorter import Sorter, SortByEntry, ISortEntry
+from kw_sorter.interfaces import ISortEntry
+from kw_sorter.sorter import Sorter, SortByEntry
 from kw_tests.common_class import CommonTestClass
 
 

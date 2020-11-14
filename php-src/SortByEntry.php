@@ -8,12 +8,12 @@ namespace Sorter;
  * @package Sorter
  * Basic implementation of single entry for sorting
  */
-class SortByEntry implements ISortEntry
+class SortByEntry implements Interfaces\ISortEntry
 {
     protected $key = '';
     protected $direction = self::DIRECTION_ASC;
 
-    public function setKey(string $key): ISortEntry
+    public function setKey(string $key): Interfaces\ISortEntry
     {
         $this->key = $key;
         return $this;
@@ -24,7 +24,7 @@ class SortByEntry implements ISortEntry
         return $this->key;
     }
 
-    public function setDirection(string $direction): ISortEntry
+    public function setDirection(string $direction): Interfaces\ISortEntry
     {
         $this->direction = in_array($direction, [static::DIRECTION_ASC, static::DIRECTION_DESC]) ? $direction : $this->direction;
         return $this;

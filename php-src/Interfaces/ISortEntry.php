@@ -1,11 +1,11 @@
 <?php
 
-namespace Sorter;
+namespace Sorter\Interfaces;
 
 
 /**
  * Interface ISortEntry
- * @package Sorter
+ * @package Sorter\Interfaces
  * Basic necessity to sort anything
  */
 interface ISortEntry
