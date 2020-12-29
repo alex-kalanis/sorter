@@ -2,10 +2,11 @@
 
 namespace BasicTests;
 
+
 use CommonTestClass;
-use Sorter\Interfaces\ISortEntry;
-use Sorter\SortByEntry;
-use Sorter\Sorter;
+use kalanis\kw_sorter\Interfaces\ISortEntry;
+use kalanis\kw_sorter\SortByEntry;
+use kalanis\kw_sorter\Sorter;
 
 
 class BasicTest extends CommonTestClass
@@ -33,7 +34,7 @@ class BasicTest extends CommonTestClass
         $sorter = new Sorter();
         $this->assertEmpty(iterator_to_array($sorter->getEntries()));
 
-        $this->assertInstanceOf('\Sorter\SortByEntry', $sorter->getDefaultItem());
+        $this->assertInstanceOf('\kalanis\kw_sorter\SortByEntry', $sorter->getDefaultItem());
 
         $sorter->add($this->mockEntry1());
         $sorter->add($this->mockEntry2());

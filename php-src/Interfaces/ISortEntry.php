@@ -1,11 +1,11 @@
 <?php
 
-namespace Sorter\Interfaces;
+namespace kalanis\kw_sorter\Interfaces;
 
 
 /**
  * Interface ISortEntry
- * @package Sorter\Interfaces
+ * @package kalanis\kw_sorter\Interfaces
  * Basic necessity to sort anything
  */
 interface ISortEntry

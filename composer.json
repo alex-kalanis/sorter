@@ -1,9 +1,12 @@
 {
   "name": "alex-kalanis/sorter",
   "description": "Shareable sorter - basic interfaces",
-  "keywords": [],
+  "keywords": [
+    "sorter",
+    "interfaces"
+  ],
   "license": "BSD 3-Clause",
-  "type": "project",
+  "type": "library",
   "require": {
     "php": ">=7.2.0"
   },
@@ -11,11 +14,18 @@
   },
   "autoload": {
     "psr-4": {
-      "Sorter\\": "php-src/"
+      "kalanis\\kw_sorter\\": "php-src/"
     }
   },
   "scripts": {
   },
+  "authors": [
+    {
+      "name": "Petr Plsek",
+      "homepage": "http://www.kalanys.com",
+      "role": "Developer"
+    }
+  ],
   "minimum-stability": "dev",
   "prefer-stable": true
 }

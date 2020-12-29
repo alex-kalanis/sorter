@@ -1,13 +1,14 @@
 <?php
 
-namespace Sorter\Interfaces;
+namespace kalanis\kw_sorter\Interfaces;
+
 
 use Traversable;
 
 
 /**
  * Interface ISorter
- * @package Sorter\Interfaces
+ * @package kalanis\kw_sorter\Interfaces
  * Basic interface
  * Make your app dependant on this interface
  */

@@ -1,12 +1,14 @@
 <?php
 
-namespace Sorter;
+namespace kalanis\kw_sorter;
+
 
 use Traversable;
 
 
 /**
  * Class Sorter
+ * @package kalanis\kw_sorter
  * Simple sorter for determine order of result
  * No sorting inside allowed - the order IS important
  */

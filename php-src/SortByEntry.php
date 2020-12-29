@@ -1,11 +1,11 @@
 <?php
 
-namespace Sorter;
+namespace kalanis\kw_sorter;
 
 
 /**
  * Class SortEntry
- * @package Sorter
+ * @package kalanis\kw_sorter
  * Basic implementation of single entry for sorting
  */
 class SortByEntry implements Interfaces\ISortEntry

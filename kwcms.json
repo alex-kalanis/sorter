@@ -1,5 +1,6 @@
 {
-  "name": "Sorter",
+  "author": "kalanis",
+  "name": "kw_sorter",
   "description": "Shareable sorter - basic interfaces",
   "source": "https://github.com/alex-kalanis/sorter",
   "license": "BSD 3-Clause",

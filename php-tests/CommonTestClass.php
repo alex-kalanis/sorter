@@ -1,6 +1,6 @@
 <?php
 
-use Sorter\SortByEntry;
+use kalanis\kw_sorter\SortByEntry;
 
 
 class CommonTestClass extends \PHPUnit\Framework\TestCase
