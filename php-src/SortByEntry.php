@@ -10,7 +10,9 @@ namespace kalanis\kw_sorter;
  */
 class SortByEntry implements Interfaces\ISortEntry
 {
+    /** @var string */
     protected $key = '';
+    /** @var string */
     protected $direction = self::DIRECTION_ASC;
 
     public function setKey(string $key): Interfaces\ISortEntry

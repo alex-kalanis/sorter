@@ -16,7 +16,7 @@ interface ISorter
 {
     /**
      * Get entries in sorting
-     * @return Traversable ISortEntry
+     * @return Traversable<ISortEntry>
      */
     public function getEntries(): Traversable;
 
