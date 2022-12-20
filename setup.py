@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-from kw_upload import __version__ as version
+from kw_sorter import __version__ as version
 
 with open("README.md", "r") as fh:
     long_desc = fh.read()
@@ -22,6 +22,7 @@ setup(
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3 :: Only',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
 )
